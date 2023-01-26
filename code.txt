@@ -1,0 +1,20 @@
+struct AA{
+ int a;
+ float b;
+}
+
+AA addAA(AA aa1, AA aa2){
+ AA aar;
+ aar.a = aa1.a + aa2.a;
+ aar.b = aa1.b + aa2.b;
+ return aar;
+}
+
+int main() {
+ AA aa;
+ aa.a = 10;
+ aa.b = 20;
+ aa = addAA(aa, aa);
+ output("%v %v \n", aa.a, aa.b);
+ return 0;
+}
